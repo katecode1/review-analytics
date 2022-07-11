@@ -6,7 +6,11 @@ with open('reviews.txt','r') as f:
 		count += 1
 		if count % 1000 == 0:
 			print(len(data))
-print(len(data))
-print(data[0])
-print('------------------')
-print(data[1])
+print('loading finished!',len(data),'record')
+
+
+average = []
+for words in data:
+	average.append(len(words))
+k = sum(average) / len((data))
+print(k)
